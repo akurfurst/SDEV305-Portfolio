@@ -39,7 +39,7 @@ app.post('/confirmation', (req, res) => {
     contacts.push(contact);
 
     //res.send(orders)
-    res.render('confirmation');
+    res.render('confirmation', {contact});
 });
 
 app.get('/admin', (req, res) => {
