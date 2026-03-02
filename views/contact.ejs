@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="/images/icon.png">
+    <link rel="stylesheet" href="/styles/contact.css">
+    <script src="/js/script.js" defer></script>
+    <title>Contact Me</title>
+</head>
+<body>
+    <nav>
+        <a href="/"><p>Home</p></a>
+        <a href="/contact"><p>Contact</p></a>
+        <a href="/admin"><p>Admin</p></a>
+        <a href="https://github.com/akurfurst"  target="_blank"><p>GitHub</p></a>
+        <a href="https://linkedin.com/in/adam-kurfurst-3064481b2" target="_blank"><p>LinkedIn</p></a>
+    </nav>
+    <form id="contact-form" action="/confirmation" method="post">
+        <h1>Contact Form</h1>
+        <fieldset id="textEntry">
+            <label for="fname" class="textEntry">First Name:
+                <span class="err" id="err-fname">First Name Required</span>
+                <input type="text" id="fname" name="fname" placeholder="Enter First Name">
+            </label>
+            <label for="lname" class="textEntry">Last Name:
+                <span class="err" id="err-lname">Last Name Required</span>
+                <input type="text" id="lname" name="lname" placeholder="Enter Last Name">
+            </label>
+            <label for="job" class="textEntry">Job Title:
+                <!--<span class="err" id="err-job">Job Title Required</span>-->
+                <input type="text" id="job" name="job" placeholder="Enter Job Title">
+            </label>
+            <label for="company" class="textEntry">Company:
+                <!--<span class="err" id="err-company">Company Required</span>-->
+                <input type="text" id="company" name="company" placeholder="Enter Company">
+            </label>
+            <label for="linkedin" class="textEntry">LinkedIn URL:
+                <span class="err" id="err-linkedin">Please enter valid LinkedIn URL</span>
+                <input type="text" id="linkedin" name="linkedin" placeholder="Enter LinkedIn URL">
+            </label>
+            <label for="email" class="textEntry">Email:
+                <span class="err" id="err-email">Email Required</span>
+                <input type="email" id="email" name="email" placeholder="Enter Email">
+            </label>
+        </fieldset>
+
+        <fieldset id="meet-section">
+            <label for="meet" class="meet-section">How did we meet?
+                <span class="err" id="err-meet">Please select option</span>
+                <select id="meet" name=meet>
+                    <option value="none">Please select</option>
+                    <option value="in-person">In-Person</option>
+                    <option value="online">Online</option>
+                    <option value="event">Event</option>
+                    <option value="other">Other</option>
+                </select>
+                
+            </label>
+            <label for="other" class="meet-section">Other (please specify)
+                <span class="err" id="err-other">Please specify</span>
+                <input type="text" id="other" name="other" placeholder="Please specify if other selected">
+            </label>
+        </fieldset>
+
+        <fieldset id="message-section" >
+            <label for="message">Message
+                <textarea rows="8" id="message" name="message"></textarea>
+            </label>
+        </fieldset>
+        <label for="email-list" id="email-list-section">
+            <input type="checkbox" id="email-list" name="emailList" value="emailList" checked onchange="emailList()">Please add me to you mailing list
+        </label>
+        <fieldset id="send-type-section">
+            <label>Choose an email format:</label>
+            <label for="html">
+                <input type="radio" id="html" name="type" value="html" checked>HTML
+            </label>
+            <label for="text">
+                <input type="radio" id="text" name="type" value="html">Text
+            </label>
+            <!--<span class="err" id="err-type">Please select an email format</span>-->
+        </fieldset>
+        <button type="submit" id="submit-button">Submit</button>
+    </form>
+    <footer>
+        <a href="https://github.com/akurfurst/portfolio" target="_blank">Github Repository: https://github.com/akurfurst/contact-form</a>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,187 @@
+body {
+    background-color: #2C3930;
+    font-family: sans-serif;
+    margin: 0;
+}
+
+nav{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 2rem;
+    padding: .5rem;
+    background-color: #3F4F44;
+    margin: .5rem;
+    border: 2px solid #A27B5C;
+    border-radius: 2rem
+}
+
+nav p{
+    margin: 1rem;
+}
+
+header {
+    background-color: #A27B5C;
+    color: #DCD7C9;
+    padding: 1rem;
+    margin: 0 auto;
+    border: .25rem solid #3F4F44;
+    border-radius: 2rem;
+}
+
+main {
+    margin: 0 auto;
+    background-color: #DCD7C9;
+    padding: 2rem;
+    border: .25rem solid #3F4F44;
+    border-radius: 2rem;
+    margin-top: 1rem;
+    color: #2C3930;
+}
+
+h1 {
+    text-align: center;
+}
+
+#contact {
+    display: flex;
+    flex-direction: row;
+    gap: 1rem;
+    justify-content: center;
+    justify-self: center;
+    border-top: 4px solid #3F4F44;
+    width: 75%;
+}
+
+#contact p{
+    margin: 1rem;
+}
+
+a {
+    text-decoration: none;
+    color: #DCD7C9;
+    border-radius: 20px;
+    border: 2px solid #A27B5C;
+}
+
+a:hover {
+    transition: 0.3s;
+    border: 2px solid #DCD7C9;
+    border-radius: 20px;
+    background-color: #3F4F44;
+}
+
+li {
+    background-color: #A27B5C;
+    padding: .5rem;
+    border: 2px solid #3F4F44;
+    border-radius: 20px;
+    margin: 2px;
+    display: inline-block;
+    width: fit-content;
+    color: #DCD7C9;
+}
+
+.location {
+    display: flex;
+    flex-direction: row;
+}
+
+#aboutMe {
+    display: flex;
+    flex-direction: column;
+}
+
+h2 {
+    width: 50%;
+    border-bottom: 2px solid #3F4F44;
+    
+
+}
+
+#aboutMe div {
+    display: flex;
+    flex-direction: row;
+    gap: 2rem;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+#aboutMe p{
+    width: 50%
+}
+
+#experience div{
+    background-color: #3F4F44;
+    border: .25rem solid #A27B5C;
+    border-radius: 2rem;
+    padding: 1rem;
+    color:#DCD7C9;
+    margin-bottom: 1rem;
+}
+
+img{
+    border: 2px solid #3F4F44;
+    border-radius: 2rem;
+}
+
+
+@media screen and (min-width: 850px) {
+    header {
+        width: 90%;
+    }
+    
+    main {
+        width: 90%;
+        display: grid;
+        grid-template-columns: 40% auto;
+        grid-template-areas: "summary  education"
+                             "skills  skills"
+                             "experience experience";
+        grid-gap: 2rem;
+    }
+    
+    #aboutMe {
+        grid-area: summary;
+    }
+    
+    #education {
+        grid-area: education;
+    }
+    
+    #skills {
+        grid-area: skills;
+    }
+    
+    #experience{
+        grid-area: experience;
+        display: grid;
+        grid-template-columns: auto auto;
+        grid-template-rows: auto auto auto;
+        grid-template-areas: "h h"
+                             "ex1 ex2"
+                             "ex3 ex4";
+        grid-gap: 1rem;
+    }
+
+    #experience h2{
+        grid-area: h;
+    }
+
+    #ex1{
+        grid-area: ex1;
+    }
+
+    #ex2{
+        grid-area: ex2;
+    }
+
+    #ex3{
+        grid-area: ex3;
+    }
+
+    #ex4{
+        grid-area: ex4;
+    }
+}

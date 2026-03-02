@@ -1,0 +1,146 @@
+body{
+    background-color: #2C3930;
+    margin: 0 15%;
+    font-family: sans-serif;
+    font-weight: 1rem;
+    
+}
+
+nav{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 2rem;
+    padding: .5rem;
+    background-color: #3F4F44;
+    margin: .5rem;
+    border: 2px solid #A27B5C;
+    border-radius: 2rem;
+    
+}
+
+nav p{
+    margin: 1rem;
+    color: #DCD7C9;
+}
+
+a {
+    text-decoration: none;
+    color: #DCD7C9;
+    border-radius: 20px;
+    border: 2px solid #A27B5C;
+}
+
+a:hover {
+    transition: 0.3s;
+    border: 2px solid #DCD7C9;
+    border-radius: 20px;
+    background-color: #3F4F44;
+}
+
+input, select, textarea{
+    margin-top: 1rem;
+}
+
+form{
+    background-color: #DCD7C9;
+    border-radius: 1rem;
+    color: #2C3930;
+}
+
+h1{
+    text-align: center;
+    width: 100%;
+    padding-top: 1rem;
+}
+
+.err{
+    color: red;
+    display: none;
+}
+
+#textEntry{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+}
+
+.textEntry{
+    display: flex;
+    flex-direction: column;
+    padding: 1rem;
+}
+
+#meet-section{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 2rem;
+    padding: 1rem;
+    margin: 1rem;
+    
+}
+
+.meet-section{
+    display: flex;
+    flex-direction: column;
+}
+
+.textEntry input{
+    height: 2rem;
+    border: 1px solid grey;
+    border-radius: .5rem;
+}
+
+fieldset{
+    border: none;
+}
+
+select, #other{
+    height: 2rem;
+}
+
+#message-section{
+    display: flex;
+    flex-direction: column;
+    padding: 1rem;
+    margin: 1rem;
+}
+
+#message-section label{
+    display: flex;
+    flex-direction: column;
+}
+
+textarea{
+    width: 100%;
+}
+
+#email-list-section{
+    padding: 2rem;
+}
+
+#send-type-section{
+    padding-left: 2rem;
+}
+
+#submit-button{
+    color: white;
+    background-color: limegreen;
+    width: 7rem;
+    height: 4rem;
+    margin: 2rem;
+    border: 1px solid grey;
+    border-radius: 1rem;;
+}
+
+a{
+    color: white;
+    text-decoration: none;
+}
+
+footer{
+    margin-top: 1rem;
+}
+
+
+
+
