@@ -68,8 +68,7 @@ img{
     width: auto;
 }
 
-.project_card > p{
-    border: 1px solid black;
+.project_card  p{
     width: 30%;
     justify-items: center;
 }
