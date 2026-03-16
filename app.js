@@ -1,6 +1,7 @@
 import express from 'express';
 import mysql2 from 'mysql2';
 import dotenv from 'dotenv';
+import {validateForm} from './validation.js';
 
 
 dotenv.config();
@@ -44,6 +45,13 @@ app.post('/confirmation', async(req, res) => {
     //crate a JSON object to store the order data
     const contact = req.body;
 
+    const valid = validateForm(contact);
+    if (!valid.isValid) {
+        console.log(valid);
+        res.render('contact', {errors: valid.errors});
+        return;
+    }
+
     const params =[
         req.body.fname,
         req.body.lname,
@@ -67,6 +75,10 @@ app.post('/confirmation', async(req, res) => {
 app.get('/admin', async(req, res) => {
     const contacts = await pool.query('SELECT * FROM contacts ORDER BY timestamp DESC');
     res.render('admin', {contacts:contacts[0]});
+});
+
+app.get('/portfolio', (req, res) => {
+    res.render('portfolio');
 });
 
 

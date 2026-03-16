@@ -5,19 +5,18 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" href="/images/icon.png">
     <link rel="stylesheet" href="/styles/contact.css">
-    <script src="/js/script.js" defer></script>
+    <!--<script src="/js/script.js" defer></script>-->
     <title>Contact Me</title>
 </head>
 <body>
-    <nav>
-        <a href="/"><p>Home</p></a>
-        <a href="/contact"><p>Contact</p></a>
-        <a href="/admin"><p>Admin</p></a>
-        <a href="https://github.com/akurfurst"  target="_blank"><p>GitHub</p></a>
-        <a href="https://linkedin.com/in/adam-kurfurst-3064481b2" target="_blank"><p>LinkedIn</p></a>
-    </nav>
+    <%- include('../views/nav') %>
     <form id="contact-form" action="/confirmation" method="post">
         <h1>Contact Form</h1>
+        <% if (typeof errors != 'undefined') { %>
+            <% errors.forEach(error => { %>
+                <p class="form-error"><%= error %></p>
+            <% }); %>
+        <% } %>
         <fieldset id="textEntry">
             <label for="fname" class="textEntry">First Name:
                 <span class="err" id="err-fname">First Name Required</span>

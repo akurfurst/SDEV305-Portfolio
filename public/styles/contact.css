@@ -59,6 +59,13 @@ h1{
     display: none;
 }
 
+.form-error{
+    color: red;
+    display: block;
+    text-align: center;
+    margin: .25rem 1rem;
+}
+
 #textEntry{
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;

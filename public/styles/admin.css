@@ -35,3 +35,42 @@ a:hover {
     border-radius: 20px;
     background-color: #3F4F44;
 }
+
+.project_card{
+    display: flex;
+    margin: 2rem;
+    background-color: #A27B5C;
+    border: 5px solid #DCD7C9;
+    border-radius: 2rem;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+}
+
+img{
+    width: 20%;
+    margin: 1rem;
+    border-radius: 1rem;
+}
+
+.project_card a{
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: .75rem 1rem;
+    margin: 1rem;
+    white-space: nowrap;
+}
+
+.project_card a p{
+    margin: 0;
+    border: none;
+    width: auto;
+}
+
+.project_card > p{
+    border: 1px solid black;
+    width: 30%;
+    justify-items: center;
+}
+
